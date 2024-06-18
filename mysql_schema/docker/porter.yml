@@ -1,0 +1,23 @@
+version: "2"
+team: "ho-dataflow"
+project: "liquibase"
+registry: "https://registry.ops.tune.com"
+
+services:
+  liquibase:
+    cia_templates:
+       - conf/liquibase.properties
+       - conf/liquibase_rollback.properties
+    
+cia:
+  default:
+    template_path: "./"
+    user: "root"
+    group: "root"
+    chmod: "0755"
+  conf/liquibase.properties:
+    destination: "/liquibase/conf/liquibase.properties"
+  conf/liquibase_rollback.properties:
+    destination: "/liquibase/conf/liquibase_rollback.properties"
+    
+  

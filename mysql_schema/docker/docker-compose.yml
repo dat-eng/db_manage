@@ -1,0 +1,5 @@
+services:
+  liquibase:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
